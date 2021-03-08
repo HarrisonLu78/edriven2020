@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: white;
+            background-color: red;
+        }
+        #invalid{
+            color: red;
+        }
+        #month{
+            font-size: 100px;
+        }
+        #calendar{
+            border: black 1px solid;
+        }
+        thead{
+            border: black 1px solid; 
+        }
+        tr{
+            border: black 1px solid;
+        }
+        th{
+            border: black 1px solid;
+        }
+        #bordered{
+            border: black 1px solid;
+            text-align: center;
+            font-size: 50px;
+        }
+        #days{
+            font-size: 50px;
+        }
+        </style>        
+</head>
+<body>
+    <h1 id="invalid"></h1> 
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th id="month" colspan="7"> </th>
+            </tr>
+            <tr id="days">
+                <th class="red">Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="dateRow">
+        </tbody> 
+    </table>
+    <script type="text/javascript" src="/js/pa-2.js"></script>
+</body>
+</html>
