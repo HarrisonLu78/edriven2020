@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 300px;
+            text-align: right;
+        }
+        #form1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25vh;
+        }
+        input{
+            text-align: right;
+        }
+        #submit{
+            background-color:#ff3333;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .field{
+            border-radius: 5px;
+            padding: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="form1">
+        <form id="form" action="">
+            <label for="input">User input from 100 to 10,000</label>
+            <input type="number" class="field" id="input" name="input"><br><br>
+
+            <label for="tax">+12% Tax</label>
+            <input type="number" class="field" id="tax" name="field" disabled><br><br>
+
+            <label for="total">Subtotal+Tax</label>
+            <input type="number" class="field" id="total" name="field" disabled><br><br>
+
+            <label for="paid">Minimum is based on Subtotal+Tax</label>
+            <input type="number" class="field" id="paid" name="field"><br><br>
+
+            <label for="change">Amount Paid-Total</label>
+            <input type="number" class="field" id="change" name="field" disabled><br><br>
+
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.getElementById("input").defaultValue="100";
+        var subtotal=document.getElementById("input")
+        var total=document.getElementById("total")
+        var paid=document.getElementById("paid")
+        var changevalue=document.getElementById("change")
+        subtotal.oninput=function() {
+            var value1=this.value;
+            if(this.value>=100 && this.value<=10000){
+                document.getElementById("paid").disabled=false;
+                var tax=this.value*.12
+                var total=this.value*1.12
+                tax=parseFloat(tax).toFixed(2);
+                total=parseFloat(total).toFixed(2);
+                document.getElementById("tax").value=(tax)
+                document.getElementById("total").value=(total)
+                document.getElementById("paid").value=(total)
+                document.getElementById("paid").min=(total)
+                document.getElementById("change").value=(total-total)
+                document.getElementById("submit").style.backgroundColor = "#66ff33";
+                document.getElementById("submit").disabled=false;
+            }else{
+                document.getElementById("paid").disabled=true;
+                for (var i=0;i<document.getElementsByName('field').length;i++){
+                    document.getElementsByName('field')[i].value='';
+                }
+                document.getElementById("submit").disabled=true;
+                document.getElementById("submit").style.backgroundColor = "#ff3333";
+            }
+        };
+        paid.oninput=function(){
+            var change=paid.value-total.value
+            change=parseFloat(change).toFixed(2);
+            document.getElementById("change").value=(change)
+            if(changevalue.value>=0){
+                document.getElementById("submit").style.backgroundColor = "#66ff33";
+                document.getElementById("submit").disabled=false;
+            }else{
+                document.getElementById("submit").style.backgroundColor = "#ff3333";
+                document.getElementById("submit").disabled=true;
+            }
+        }
+        
+    </script>
+</body>
+</html>
