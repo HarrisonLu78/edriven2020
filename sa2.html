@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Pillow78</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .pillow{
+            font-size: 30px;
+            margin-left: 20px;
+            margin-top: 5px;
+            color: white;
+        }
+        .sv{
+            color: blue;
+        }
+        .black{
+           background-color:black
+        }
+        .white{
+           color:white
+        }
+        .tbl1{
+            margin: 5%;
+            color: white;
+        }
+        .btn{
+            margin: 10px;
+        }
+        .imgg{
+          height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" href="sa1.html"><h1 class="pillow">Pillow<span class="sv">78</span></h1></a>
+        </nav>
+    </div>
+    <div>
+        <div>
+            <a href="" data-toggle="modal" data-target="#exampleModalCenter"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter">Add!</button></a>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Order Form</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <label for="ORnum">OR #</label>
+                                    <input type="text" class="form-control" id="ORnum">   
+                                </div> 
+                                <div class="col col-md-6">
+                                    <label for="cName">Customer Name</label>
+                                    <input type="text" class="form-control" id="cName">   
+                                </div> 
+                            </div>
+                            <div class="row r1">
+                                <div class="col col-md-4">
+                                    <label for="item1">Item 1</label>
+                                    <select class="form-control" id="item1" name="item"></select>
+                                </div>
+                                <div class="col col-md-4">
+                                    <label for="item1Price">Price</label>
+                                    <input type="number" class="form-control" id="item1Price" value="0">
+                                </div>
+                                <div class="col col-md-2">
+                                    <label for="item1Qty">Qty</label>
+                                    <input type="number" class="form-control" id="item1Qty" value="0"> 
+                                </div>
+                                <div class="col col-md-2">
+                                    <label for="item1Subtotal">Subtotal</label>
+                                    <input type="number" class="form-control" id="item1Subtotal" value="0.00" disabled>  
+                                </div>
+                            </div>
+                            <div class="row r2">
+                                <div class="col col-md-4">
+                                  <label for="item2">Item 2</label>
+                                  <select class="form-control" id="item2" name="item"></select>
+                                </div>
+                                <div class="col col-md-4">
+                                  <label for="item2Price">Price</label>
+                                  <input type="number" class="form-control" id="item2Price" value="0">
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item2Qty">Qty</label>
+                                  <input type="number" class="form-control" id="item2Qty" value="0"> 
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item2Subtotal">Subtotal</label>
+                                  <input type="number" class="form-control" id="item2Subtotal" value="0.00" disabled>  
+                                </div>
+                            </div>
+                            <div class="row r3">
+                                <div class="col col-md-4">
+                                  <label for="item3">Item 3</label>
+                                  <select class="form-control" id="item3" name="item"></select>
+                                </div>
+                                <div class="col col-md-4">
+                                  <label for="item3Price">Price</label>
+                                  <input type="number" class="form-control" id="item3Price" value="0">
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item3Qty">Qty</label>
+                                  <input type="number" class="form-control" id="item3Qty" value="0"> 
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item3Subtotal">Subtotal</label>
+                                  <input type="number" class="form-control" id="item3Subtotal" value="0.00" disabled>  
+                                </div>
+                            </div>
+                            <div class="row r4">
+                                <div class="col col-md-4">
+                                  <label for="item4">Item 4</label>
+                                  <select class="form-control" id="item4" name="item"></select>
+                                </div>
+                                <div class="col col-md-4">
+                                  <label for="item4Price">Price</label>
+                                  <input type="number" class="form-control" id="item4Price" value="0">
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item4Qty">Qty</label>
+                                  <input type="number" class="form-control" id="item4Qty" value="0"> 
+                                </div>
+                                <div class="col col-md-2">
+                                  <label for="item4Subtotal">Subtotal</label>
+                                  <input type="number" class="form-control" id="item4Subtotal" value="0.00" disabled>  
+                                </div>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" id="clear">Clear</button>
+                      <button type="button" class="btn btn-primary" id="checkout">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="tbl1">
+            <table class="table table-stripped white">
+                <thead>
+                  <tr>
+                    <th scope="col">Order#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="orderList">
+                </tbody>
+              </table>
+        </div>
+        <div id="modalArea">
+
+        </div>
+    </div>
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+        let product=[];
+        let pic=[];
+        const item1=document.getElementById('item1');
+        const item2=document.getElementById('item2');
+        const item3=document.getElementById('item3');
+        const item4=document.getElementById('item4');
+        const items=document.getElementsByName('item');
+        const request="https://fakestoreapi.herokuapp.com/products?limit=5";
+        const getData=async()=>{
+          const response= await fetch(request);
+          const jsondata=response.json();
+          return jsondata
+          
+        }
+        getData().then((value)=>{
+          const prod=value
+          for(item of prod){
+            const opt1=document.createElement('option')
+            opt1.value=+item.title;
+            opt1.innerHTML=item.title;
+            const opt2=document.createElement('option')
+            opt2.value=item.title;
+            opt2.innerHTML=item.title;
+            const opt3=document.createElement('option')
+            opt3.value=item.title;
+            opt3.innerHTML=item.title;
+            const opt4=document.createElement('option')
+            opt4.value=item.title;
+            opt4.innerHTML=item.title;
+
+              item1.appendChild(opt1)
+              item2.appendChild(opt2)
+              item3.appendChild(opt3)
+              item4.appendChild(opt4)
+              item1.selectedIndex=-1;
+              item2.selectedIndex=-1;
+              item3.selectedIndex=-1;
+              item4.selectedIndex=-1;
+              product.push(item.title);
+              pic.push(item.image);
+              
+          }
+        })
+          .catch((err)=>{
+            console.log(err)
+          })
+        ///////////////////////////////////////////////////////////////////
+        var item1P=document.getElementById('item1Price');
+        var item1Q=document.getElementById('item1Qty');
+        item1P.oninput=function(){
+          var item1Price=document.getElementById('item1Price').value;
+          var item1Qty=document.getElementById('item1Qty').value;
+          subtotal=item1Price*item1Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item1Subtotal').value=(subtotal)
+        }
+        item1Q.oninput=function(){
+          var item1Price=document.getElementById('item1Price').value;
+          var item1Qty=document.getElementById('item1Qty').value;
+          subtotal=item1Price*item1Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item1Subtotal').value=(subtotal)
+        }
+        ///////////////////////////////////////////////////////////////////
+        var item2P=document.getElementById('item2Price');
+        var item2Q=document.getElementById('item2Qty');
+        item2P.oninput=function(){
+          var item2Price=document.getElementById('item2Price').value;
+          var item2Qty=document.getElementById('item2Qty').value;
+          subtotal=item2Price*item2Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item2Subtotal').value=(subtotal)
+        }
+        item2Q.oninput=function(){
+          var item2Price=document.getElementById('item2Price').value;
+          var item2Qty=document.getElementById('item2Qty').value;
+          subtotal=item2Price*item2Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item2Subtotal').value=(subtotal)
+        }
+        ///////////////////////////////////////////////////////////////////
+        var item3P=document.getElementById('item3Price');
+        var item3Q=document.getElementById('item3Qty');
+        item3P.oninput=function(){
+          var item3Price=document.getElementById('item3Price').value;
+          var item3Qty=document.getElementById('item3Qty').value;
+          subtotal=item3Price*item3Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item3Subtotal').value=(subtotal)
+        }
+        item3Q.oninput=function(){
+          var item3Price=document.getElementById('item3Price').value;
+          var item3Qty=document.getElementById('item3Qty').value;
+          subtotal=item3Price*item3Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item3Subtotal').value=(subtotal)
+        }
+        ///////////////////////////////////////////////////////////////////
+        var item4P=document.getElementById('item4Price');
+        var item4Q=document.getElementById('item4Qty');
+        item4P.oninput=function(){
+          var item4Price=document.getElementById('item4Price').value;
+          var item4Qty=document.getElementById('item4Qty').value;
+          subtotal=item4Price*item4Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item4Subtotal').value=(subtotal)
+        }
+        item4Q.oninput=function(){
+          var item4Price=document.getElementById('item4Price').value;
+          var item4Qty=document.getElementById('item4Qty').value;
+          subtotal=item4Price*item4Qty
+          subtotal=parseFloat(subtotal).toFixed(2);
+          document.getElementById('item4Subtotal').value=(subtotal)
+        }
+        ///////////////////////////////////////////////////////////////////
+        var orderCollection=[];
+        var inputItem=[];
+        
+        const getInputs=async()=>{
+          var item1I="";
+          var item1P="";
+          var item1p="";
+          var item1Q="";
+          var item1S="";
+          
+          var item2I="";
+          var item2P="";
+          var item2p="";
+          var item2Q="";
+          var item2S="";
+
+          var item3I="";
+          var item3P="";
+          var item3p="";
+          var item3Q="";
+          var item3S="";
+
+          var item4I="";
+          var item4P="";
+          var item4p="";
+          var item4Q="";
+          var item4S="";
+
+          let Item1={}
+          let Item2={}
+          let Item3={}
+          let Item4={}
+          let customer={};
+          let total1= parseFloat(document.getElementById('item1Subtotal').value)+parseFloat(document.getElementById('item2Subtotal').value)+parseFloat(document.getElementById('item3Subtotal').value)+parseFloat(document.getElementById('item4Subtotal').value)
+          customer.or=document.getElementById('ORnum').value,
+          name=document.getElementById('cName').value
+          if(!name){
+            customer.cname="Not Specified"
+          }else{
+            customer.cname=name;
+          }
+          customer.total=total1,
+          inputItem.push({customer: customer})
+          var OR=customer.or
+          var CNAME=customer.cname
+          var TOTAL=customer.total
+          var item1s=document.getElementById('item1')
+          var item2s=document.getElementById('item2')
+          var item3s=document.getElementById('item3')
+          var item4s=document.getElementById('item4')
+          if (item1s.selectedIndex!=-1){
+              Item1.item=product[item1s.selectedIndex]
+              Item1.pic=pic[item1s.selectedIndex]
+              Item1.price=document.getElementById('item1Price').value
+              Item1.quantity=document.getElementById('item1Qty').value
+              Item1.subtotal=document.getElementById('item1Subtotal').value,  
+              inputItem.push({Item1: Item1})
+              item1I=product[item1s.selectedIndex]
+              item1P=pic[item1s.selectedIndex];
+              item1p="₱"+document.getElementById('item1Price').value
+              item1Q=document.getElementById('item1Qty').value
+              item1S="₱"+document.getElementById('item1Subtotal').value
+          }
+          if (item2s.selectedIndex!=-1){
+              Item2.item=product[item2s.selectedIndex]
+              Item2.pic=pic[item2s.selectedIndex]
+              Item2.price=document.getElementById('item2Price').value
+              Item2.quantity=document.getElementById('item2Qty').value
+              Item2.subtotal=document.getElementById('item2Subtotal').value
+              inputItem.push({Item2: Item2})
+              item2I=product[item2s.selectedIndex]
+              item2P=pic[item2s.selectedIndex]
+              item2p="₱"+document.getElementById('item2Price').value
+              item2Q=document.getElementById('item2Qty').value
+              item2S="₱"+document.getElementById('item2Subtotal').value
+          }
+          if (item3s.selectedIndex!=-1){
+              Item3.item=product[item3s.selectedIndex]
+              Item3.pic=pic[item3s.selectedIndex]
+              Item3.price=document.getElementById('item3Price').value
+              Item3.quantity=document.getElementById('item3Qty').value
+              Item3.subtotal=document.getElementById('item3Subtotal').value  
+              inputItem.push({Item3: Item3})
+              item3I=item=product[item3s.selectedIndex]
+              item3P=pic[item3s.selectedIndex]
+              item3p="₱"+document.getElementById('item3Price').value
+              item3Q=document.getElementById('item3Qty').value
+              item3S="₱"+document.getElementById('item3Subtotal').value
+          }
+          if (item4s.selectedIndex!=-1){
+              Item4.item=product[item4s.selectedIndex]
+              Item4.pic=pic[item4s.selectedIndex]
+              Item4.price=document.getElementById('item4Price').value
+              Item4.quantity=document.getElementById('item4Qty').value
+              Item4.subtotal=document.getElementById('item4Subtotal').value 
+              inputItem.push({Item: Item4})
+              item4I=product[item4s.selectedIndex]
+              item4P=pic[item4s.selectedIndex]
+              item4p="₱"+document.getElementById('item4Price').value
+              item4Q=document.getElementById('item4Qty').value
+              item4S="₱"+document.getElementById('item3Subtotal').value
+          }
+          orderCollection.push({Order: inputItem});
+          inputItem = [];
+          console.log(orderCollection);   
+          var table=document.getElementById('orderList')
+          var modal=document.getElementById('modalArea')
+          var row=`
+            <tr>
+              <td>${customer.or}</td>
+              <td>${customer.cname}</td>
+              <td>₱${parseFloat(customer.total).toFixed(2)}</td>
+              <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${customer.or}">View</button></td>
+            </tr> 
+          `
+          var modalContent=`
+          <div class="modal fade" id="exampleModal${customer.or}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Order List</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Official Receipt Number: <u>${customer.or}</u></p>
+                  <p>Customer Name: <u>${customer.cname}</u></p>
+                  <p>Order Total: <u>${customer.total}</u></p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="card">
+                          <img class="card-img-top imgg" src="${item1P}" alt="None Ordered">
+                          <div class="card-body">
+                            <h5 class="card-title">${item1I}</h5>
+                            <p class="card-text">Item Price:<u>${item1p}</u></p>
+                            <p class="card-text">Order Quantity:<u>${item1Q}</u></p>
+                            <p class="card-text">Item Subtotal:<u>${item1S}</u></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="card">
+                          <img class="card-img-top imgg" src="${item2P}" alt="None Ordered">
+                          <div class="card-body">
+                            <h5 class="card-title">${item2I}</h5>
+                            <p class="card-text">Item Price:<u>${item2p}</u></p>
+                            <p class="card-text">Order Quantity:<u>${item2Q}</u></p>
+                            <p class="card-text">Item Subtotal:<u>${item2S}</u></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="card">
+                          <img class="card-img-top imgg" src="${item3P}" alt="None Ordered">
+                          <div class="card-body">
+                            <h5 class="card-title">${item3I}</h5>
+                            <p class="card-text">Item Price:<u>${item3p}</u></p>
+                            <p class="card-text">Order Quantity:<u>${item3Q}</u></p>
+                            <p class="card-text">Item Subtotal:<u>${item3S}</u></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="card">
+                          <img class="card-img-top imgg" src="${item4P}" alt="None Ordered">
+                          <div class="card-body">
+                            <h5 class="card-title">${item4I}</h5>
+                            <p class="card-text">Item Price:<u>${item4p}</u></p>
+                            <p class="card-text">Order Quantity:<u>${item4Q}</u></p>
+                            <p class="card-text">Item Subtotal:<u>${item4S}</u></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          `
+          modal.innerHTML+=modalContent;  
+          table.innerHTML+=row;  
+        }
+        const clear=()=>{
+          var ORnum=document.getElementById('ORnum');
+          var cName=document.getElementById('cName');
+          var item1=document.getElementById('item1');
+          var item2=document.getElementById('item2');
+          var item3=document.getElementById('item3');
+          var item4=document.getElementById('item4');
+          var item1Price=document.getElementById('item1Price')
+          var item1Qty=document.getElementById('item1Qty');  
+          var item2Price=document.getElementById('item2Price');
+          var item2Qty=document.getElementById('item2Qty');
+          var item3Price=document.getElementById('item3Price');
+          var item3Qty=document.getElementById('item3Qty');
+          var item4Price=document.getElementById('item4Price');
+          var item4Qty=document.getElementById('item4Qty');
+          var item1Sub=document.getElementById('item1Subtotal')
+          var item2Sub=document.getElementById('item2Subtotal')
+          var item3Sub=document.getElementById('item3Subtotal')
+          var item4Sub=document.getElementById('item4Subtotal')
+          ORnum.value="";
+          cName.value="";
+          item1.selectedIndex=-1;
+          item2.selectedIndex=-1;
+          item3.selectedIndex=-1;
+          item4.selectedIndex=-1;
+          item1Price.value=0;
+          item2Price.value=0;
+          item3Price.value=0;
+          item4Price.value=0;
+          item1Qty.value=0;
+          item2Qty.value=0;
+          item3Qty.value=0;
+          item4Qty.value=0;
+          item1Sub.value=parseFloat(0).toFixed(2);
+          item2Sub.value=parseFloat(0).toFixed(2);
+          item3Sub.value=parseFloat(0).toFixed(2);
+          item4Sub.value=parseFloat(0).toFixed(2);
+          }
+        document.addEventListener('DOMContentLoaded', ()=>{
+          document.getElementById('clear').addEventListener('click', clear);
+          document.getElementById('checkout').addEventListener('click', getInputs);
+        });
+    </script>
+</body>
+</html>
